@@ -8,13 +8,114 @@
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     android:background="@color/colorLightGrey">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="90dp"
+            android:layout_gravity="center_horizontal">
 
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/campus_icon"
+                android:contentDescription="@string/label_map"
+                android:src="@drawable/ic_map" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_map"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/to_do_list_icon"
+                android:contentDescription="@string/label_to_do_list"
+                android:src="@drawable/ic_to_do" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_to_do_list"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/places_icon"
+                android:contentDescription="@string/label_places"
+                android:src="@drawable/ic_stadium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_places"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/events_icon"
+                android:contentDescription="@string/label_event"
+                android:src="@drawable/ic_calendar" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_event"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/check_list_icon"
+                android:contentDescription="@string/label_check_list"
+                android:src="@drawable/ic_checklist" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_check_list"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/help_line_icon"
+                android:contentDescription="@string/label_help_line"
+                android:src="@drawable/ic_siren" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_help_line"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorWhite"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:contentPadding="10dp">
@@ -44,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/weather_location"
-                    android:textColor="@color/colorBlack"
+                    android:textColor="@color/colorDarkGrey"
                     android:textFontWeight="5dp"
                     android:textSize="25dp" />
 
@@ -53,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/weather_temp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/colorDarkGrey"
                     android:textSize="18dp" />
 
                 <TextView
@@ -61,123 +162,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/weather_type"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/colorDarkGrey"
                     android:textSize="15dp" />
             </LinearLayout>
 
-
+            color/colorPrimaryDark
         </LinearLayout>
     </android.support.v7.widget.CardView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="90dp"
-            android:layout_gravity="center_horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/campus_icon"
-                android:contentDescription="@string/label_map"
-                android:src="@drawable/ic_map" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_map"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/to_do_list_icon"
-                android:contentDescription="@string/label_to_do_list"
-                android:src="@drawable/ic_to_do" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_to_do_list"
-                android:gravity="center"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/places_icon"
-                android:contentDescription="@string/label_places"
-                android:src="@drawable/ic_stadium" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_places"
-                android:gravity="center"/>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/events_icon"
-                android:contentDescription="@string/label_event"
-                android:src="@drawable/ic_calendar" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/label_event"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/check_list_icon"
-                android:contentDescription="@string/label_check_list"
-                android:src="@drawable/ic_checklist" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/label_check_list"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/help_line_icon"
-                android:contentDescription="@string/label_help_line"
-                android:src="@drawable/ic_siren" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/label_help_line"/>
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="5dp"
-        android:textColor="@color/colorPrimary"
-        android:textSize="40dp"
-        android:text="@string/app_name"/>
 
 </LinearLayout>
