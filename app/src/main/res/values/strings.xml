@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MCproject</string>
+    <string name="app_name">Stupp</string>
+    <string name="label_map">Campus Map</string>
+    <string name="label_event">Events</string>
+    <string name="label_places">Places</string>
+    <string name="label_to_do_list">To Do List</string>
+    <string name="label_check_list">Check List</string>
+    <string name="label_help_line">Help Line</string>
 </resources>
