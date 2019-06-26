@@ -6,4 +6,8 @@
     <string name="label_to_do_list">To Do List</string>
     <string name="label_check_list">Check List</string>
     <string name="label_help_line">Help Line</string>
+    <string name="label_hot">Current Weather</string>
+    <string name="weather_location">Halifax</string>
+    <string name="weather_temp">16</string>
+    <string name="weather_type">Cloudy</string>
 </resources>
