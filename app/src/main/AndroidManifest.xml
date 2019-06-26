@@ -9,12 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".CampusMapActivity">
+
+        </activity>
+        <activity android:name=".CheckListActivity">
+
+        </activity>
+        <activity android:name=".EventsActivity">
+
+        </activity>
+        <activity android:name=".HelpLineActivity">
+
+        </activity>
+        <activity android:name=".PlacesActivity">
+
+        </activity>
+        <activity android:name=".ToDoListActivity">
+            
         </activity>
     </application>
 
