@@ -23,6 +23,9 @@
         <activity android:name=".CheckListActivity">
 
         </activity>
+        <activity android:name=".MobileRecommenderAppActivity">
+
+        </activity>
         <activity android:name=".EventsActivity">
 
         </activity>

@@ -10,4 +10,5 @@
     <string name="weather_location">Halifax</string>
     <string name="weather_temp">16</string>
     <string name="weather_type">Cloudy</string>
+    <string name="txt_m_app_recommender">Mobile App Recommender</string>
 </resources>
