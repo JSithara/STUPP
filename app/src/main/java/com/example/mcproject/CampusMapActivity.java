@@ -1,7 +1,7 @@
 package com.example.mcproject;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CampusMapActivity extends AppCompatActivity {
     @Override
