@@ -1,10 +1,13 @@
 package com.example.mcproject;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.TreeMap;
 
@@ -42,12 +45,12 @@ public class MobileRecommenderAppAdapter extends RecyclerView.Adapter<MobileReco
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(mDataset.get(key)));
+                v.getContext().startActivity(intent);
             }
         });
-
     }
-
     @Override
     public int getItemCount() {
         return mDataset.size();

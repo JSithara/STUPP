@@ -23,7 +23,7 @@ public class MobileRecommenderAppActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new HelpLineAdapter(MobileAppData);
+        mAdapter = new MobileRecommenderAppAdapter(MobileAppData);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -31,6 +31,8 @@ public class MobileRecommenderAppActivity extends AppCompatActivity {
         TreeMap<String,String> data = new TreeMap<String,String>();
         data.put("DalU",  "https://play.google.com/store/apps/details?id=edu.dalhousie.mobileapp&hl=en");
         data.put("Dal Safe",  "https://play.google.com/store/apps/details?id=com.cutcom.apparmor.dal&hl=en");
+        data.put("Transit - Real-Time Transport",  "https://play.google.com/store/apps/details?id=com.thetransitapp.droid&hl=en_CA");
+        data.put("Maps - Navigate & Explore",  "https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
         return data;
     }
 }

@@ -1,6 +1,8 @@
 package com.example.mcproject;
 
 import android.Manifest;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.TreeMap;
 
@@ -52,9 +55,16 @@ public class HelpLineAdapter extends RecyclerView.Adapter<HelpLineAdapter.MyView
                 phoneIntent.setData(Uri.parse("tel:"+mDataset.get(key)));
                 if (ActivityCompat.checkSelfPermission(v.getContext(),
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ClipData clip = ClipData.newPlainText("tel", ""+mDataset.get(key));
+                    ClipboardManager clipboard = (ClipboardManager)
+                    v.getContext().getSystemService(v.getContext().CLIPBOARD_SERVICE);
+                    clipboard.setPrimaryClip(clip);
+                    Toast.makeText(v.getContext(), "Paste Phone Number to Call", Toast.LENGTH_SHORT).show();
                     return;
+                }else{
+                    v.getContext().startActivity(phoneIntent);
                 }
-                ActivityCompat.startActivity(v.getContext(),phoneIntent,null);
+
             }
         });
 
