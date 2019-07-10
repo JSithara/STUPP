@@ -23,10 +23,10 @@ public interface ChecklistDAO {
     void insertAll(Checklist... check_list_items);
 
     @Query("UPDATE Checklist set check_list_status = 'Done' where check_list_id = :check_list_id")
-    boolean setItemAsDone(int check_list_id);
+    int setItemAsDone(int check_list_id);
 
     @Query("UPDATE Checklist set check_list_status = 'Not Done' where check_list_id = :check_list_id")
-    boolean setItemAsNotDone(int check_list_id);
+    int setItemAsNotDone(int check_list_id);
 
     @Delete
     void delete(Checklist user);

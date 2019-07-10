@@ -10,6 +10,7 @@ public class Places {
 
     public String place_name;
     public String place_type;
+    public String place_description;
     public int place_lat;
     public int place_lng;
     public String place_ratings;

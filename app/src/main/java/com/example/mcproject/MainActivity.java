@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.mcproject.database.database;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(changeView);
             }
         });
+
 
     }
 }
