@@ -21,7 +21,7 @@ import com.example.mcproject.database.toDoList.to_do_listDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 4, exportSchema = false)
+@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 17, exportSchema = false)
 public abstract class database extends RoomDatabase {
     private static database INSTANCE;
 
@@ -66,6 +66,23 @@ public abstract class database extends RoomDatabase {
        for(Checklist item : getChecklistData()){
            addCheckList(item,db);
        }
+
+       for(to_do_list item : getToDoListData()){
+           addTo_do_list(item,db);
+       }
+
+        for(Places item : getPlacesData()){
+            addPlace(item,db);
+        }
+
+        for(PlacesImages item : getPlacesImageData()){
+            addAPlace_image(item,db);
+        }
+
+        for(event item : getEventsData()){
+            addEvent(item,db);
+        }
+
     }
 
     private static List<Checklist> getChecklistData(){
@@ -160,11 +177,17 @@ public abstract class database extends RoomDatabase {
     private static List<to_do_list> getToDoListData(){
         List<to_do_list> ToDoListItems= new ArrayList<to_do_list>();
 
-//        Checklist item1 = new Checklist();
-//        item1.setCheck_list_item("Get Student ID Card");
-//        item1.setCheck_list_location("Howe Hall 6230 Coburg Rd");
-//        item1.setCheck_list_status("Not Done");
-//        CheckListItems.add(item1);
+        to_do_list item1 = new to_do_list();
+        item1.setTo_do_list_item("Check The Student Checklist");
+        item1.setTo_do_list_source_id(0);
+        item1.setTo_do_list_source_type("generated");
+        ToDoListItems.add(item1);
+
+        to_do_list item2 = new to_do_list();
+        item2.setTo_do_list_item("Download Mobile recommended Apps");
+        item2.setTo_do_list_source_id(0);
+        item2.setTo_do_list_source_type("generated");
+        ToDoListItems.add(item2);
 
         return ToDoListItems;
     }

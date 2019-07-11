@@ -24,6 +24,9 @@ public interface eventDAO {
     @Query("SELECT * FROM event WHERE event_time = :event_time")
     event findByTime(String event_time);
 
+    @Query("SELECT * FROM event WHERE event_date = :event_date")
+    event findByDate(String event_date);
+
     @Insert
     void insertAll(event... events);
 

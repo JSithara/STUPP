@@ -71,13 +71,6 @@ public class CheckListAdapter extends RecyclerView.Adapter<CheckListAdapter.MyVi
             }
         });
         text_view.setText(mDataset.get(position).check_list_item);
-        holder.LinearView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
     }
 
     @Override

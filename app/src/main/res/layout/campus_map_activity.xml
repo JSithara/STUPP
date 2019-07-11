@@ -5,22 +5,13 @@
     android:orientation="horizontal"
     android:background="@color/colorLightGrey"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        app:cardBackgroundColor="@color/colorWhite"
-        app:contentPadding="7dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:background="@drawable/ic_search"/>
-    </androidx.cardview.widget.CardView>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".CampusMapActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
 
 </LinearLayout>
