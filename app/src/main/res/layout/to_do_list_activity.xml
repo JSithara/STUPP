@@ -9,7 +9,8 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/to_do_list_edit"
             android:layout_margin="5dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content" />

@@ -16,7 +16,7 @@ import com.example.mcproject.database.toDoList.to_do_list;
 import java.util.List;
 
 public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.MyViewHolder> {
-    private List<to_do_list> mDataset;
+    public List<to_do_list> mDataset;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public LinearLayout LinearView;
@@ -65,5 +65,11 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.MyView
         mDataset.remove(position);
         notifyItemRemoved(position);
         notifyItemRangeChanged(position, mDataset.size());
+    }
+
+    public void addItem(to_do_list item){
+        mDataset.add(item);
+        notifyItemInserted(mDataset.size());
+        notifyItemRangeChanged(mDataset.size()-1,mDataset.size());
     }
 }

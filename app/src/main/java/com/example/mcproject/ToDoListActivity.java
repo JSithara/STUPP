@@ -3,8 +3,10 @@ package com.example.mcproject;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mcproject.database.database;
 import com.example.mcproject.database.toDoList.to_do_list;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.List;
 
@@ -37,10 +40,32 @@ public class ToDoListActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
 
         ImageView insert = findViewById(R.id.insert_to_do_list);
-        TextView textView = findViewById(R.id.to_do_list_text_view);
+        final EditText textView= findViewById(R.id.to_do_list_edit);
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast toast = Toast.makeText(v.getContext(), "Empty Text Input", Toast.LENGTH_SHORT);
+                if(textView !=  null){
+                    String input = textView.getText().toString();
+                    if(!input.equals(" ")){
+                        to_do_list item = new to_do_list();
+                        item.setTo_do_list_item(input);
+                        item.setTo_do_list_source_id(0);
+                        item.setTo_do_list_source_type("User Generated");
+                        database.getAppDatabase(v.getContext()).to_do_listDAO().insertAll(item);
+                        textView.setText("");
+                        Toast success_toast = Toast.makeText(v.getContext(), "Insertion Complete", Toast.LENGTH_SHORT);
+                        success_toast.show();
+                        finish();
+                        startActivity(getIntent());
+                    }else{
+
+                        toast.show();
+
+                    }
+                }else{
+                    toast.show();
+                }
 
             }
         });
