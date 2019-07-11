@@ -153,11 +153,189 @@ public abstract class database extends RoomDatabase {
     private static List<Places> getPlacesData(){
         List<Places> PlacesItems= new ArrayList<Places>();
 
-//        Checklist item1 = new Checklist();
-//        item1.setCheck_list_item("Get Student ID Card");
-//        item1.setCheck_list_location("Howe Hall 6230 Coburg Rd");
-//        item1.setCheck_list_status("Not Done");
-//        CheckListItems.add(item1);
+        Places item1 = new Places();
+        item1.setPlace_name("Dalhousie University Bookstore");
+        item1.setPlace_description("");
+        item1.setPlace_ratings(4.3);
+        item1.setPlace_type("Store");
+        item1.setPlace_lat(44.637046);
+        item1.setPlace_lng(-63.589257);
+        PlacesItems.add(item1);
+
+        Places item2 = new Places();
+        item2.setPlace_name("Dalhousie University Bookstore");
+        item2.setPlace_description("");
+        item2.setPlace_ratings(4.3);
+        item2.setPlace_type("Store");
+        item2.setPlace_lat(44.637046);
+        item2.setPlace_lng(-63.589257);
+        PlacesItems.add(item2);
+
+        Places item3 = new Places();
+        item3.setPlace_name("Dalhousie University Bookstore");
+        item3.setPlace_description("");
+        item3.setPlace_ratings(4.3);
+        item3.setPlace_type("Store");
+        item3.setPlace_lat(44.637046);
+        item3.setPlace_lng(-63.589257);
+        PlacesItems.add(item3);
+
+        Places item4 = new Places();
+        item4.setPlace_name("Dalhousie University Bookstore");
+        item4.setPlace_description("");
+        item4.setPlace_ratings(4.3);
+        item4.setPlace_type("Store");
+        item4.setPlace_lat(44.637046);
+        item4.setPlace_lng(-63.589257);
+        PlacesItems.add(item4);
+
+        Places item5 = new Places();
+        item5.setPlace_name("Dalhousie University Bookstore");
+        item5.setPlace_description("");
+        item5.setPlace_ratings(4.3);
+        item5.setPlace_type("Store");
+        item5.setPlace_lat(44.637046);
+        item5.setPlace_lng(-63.589257);
+        PlacesItems.add(item5);
+
+        Places item6 = new Places();
+        item6.setPlace_name("Dalhousie University Bookstore");
+        item6.setPlace_description("");
+        item6.setPlace_ratings(4.3);
+        item6.setPlace_type("Store");
+        item6.setPlace_lat(44.637046);
+        item6.setPlace_lng(-63.589257);
+        PlacesItems.add(item6);
+
+        Places item7 = new Places();
+        item7.setPlace_name("Dalhousie University Bookstore");
+        item7.setPlace_description("");
+        item7.setPlace_ratings(4.3);
+        item7.setPlace_type("Store");
+        item7.setPlace_lat(44.637046);
+        item7.setPlace_lng(-63.589257);
+        PlacesItems.add(item7);
+
+        Places item8 = new Places();
+        item8.setPlace_name("Dalhousie University Bookstore");
+        item8.setPlace_description("");
+        item8.setPlace_ratings(4.3);
+        item8.setPlace_type("Store");
+        item8.setPlace_lat(44.637046);
+        item8.setPlace_lng(-63.589257);
+        PlacesItems.add(item8);
+
+        Places item9 = new Places();
+        item9.setPlace_name("Dalhousie University Bookstore");
+        item9.setPlace_description("");
+        item9.setPlace_ratings(4.3);
+        item9.setPlace_type("Store");
+        item9.setPlace_lat(44.637046);
+        item9.setPlace_lng(-63.589257);
+        PlacesItems.add(item9);
+
+        Places item10 = new Places();
+        item10.setPlace_name("Dalhousie University Bookstore");
+        item10.setPlace_description("");
+        item10.setPlace_ratings(4.3);
+        item10.setPlace_type("Store");
+        item10.setPlace_lat(44.637046);
+        item10.setPlace_lng(-63.589257);
+        PlacesItems.add(item10);
+
+        Places item11 = new Places();
+        item11.setPlace_name("Dalhousie University Bookstore");
+        item11.setPlace_description("");
+        item11.setPlace_ratings(4.3);
+        item11.setPlace_type("Store");
+        item11.setPlace_lat(44.637046);
+        item11.setPlace_lng(-63.589257);
+        PlacesItems.add(item11);
+
+        Places item12 = new Places();
+        item12.setPlace_name("Dalhousie University Bookstore");
+        item12.setPlace_description("");
+        item12.setPlace_ratings(4.3);
+        item12.setPlace_type("Store");
+        item12.setPlace_lat(44.637046);
+        item12.setPlace_lng(-63.589257);
+        PlacesItems.add(item12);
+
+        Places item13 = new Places();
+        item13.setPlace_name("Dalhousie University Bookstore");
+        item13.setPlace_description("");
+        item13.setPlace_ratings(4.3);
+        item13.setPlace_type("Store");
+        item13.setPlace_lat(44.637046);
+        item13.setPlace_lng(-63.589257);
+        PlacesItems.add(item13);
+
+        Places item14 = new Places();
+        item14.setPlace_name("Dalhousie University Bookstore");
+        item14.setPlace_description("");
+        item14.setPlace_ratings(4.3);
+        item14.setPlace_type("Store");
+        item14.setPlace_lat(44.637046);
+        item14.setPlace_lng(-63.589257);
+        PlacesItems.add(item14);
+
+        Places item15 = new Places();
+        item15.setPlace_name("Dalhousie University Bookstore");
+        item15.setPlace_description("");
+        item15.setPlace_ratings(4.3);
+        item15.setPlace_type("Store");
+        item15.setPlace_lat(44.637046);
+        item15.setPlace_lng(-63.589257);
+        PlacesItems.add(item15);
+
+        Places item16 = new Places();
+        item16.setPlace_name("Dalhousie University Bookstore");
+        item16.setPlace_description("");
+        item16.setPlace_ratings(4.3);
+        item16.setPlace_type("Store");
+        item16.setPlace_lat(44.637046);
+        item16.setPlace_lng(-63.589257);
+        PlacesItems.add(item16);
+
+        Places item17 = new Places();
+        item17.setPlace_name("Dalhousie University Bookstore");
+        item17.setPlace_description("");
+        item17.setPlace_ratings(4.3);
+        item17.setPlace_type("Store");
+        item17.setPlace_lat(44.637046);
+        item17.setPlace_lng(-63.589257);
+        PlacesItems.add(item17);
+
+        Places item18 = new Places();
+        item18.setPlace_name("Dalhousie University Bookstore");
+        item18.setPlace_description("");
+        item18.setPlace_ratings(4.3);
+        item18.setPlace_type("Store");
+        item18.setPlace_lat(44.637046);
+        item18.setPlace_lng(-63.589257);
+        PlacesItems.add(item18);
+
+        Places item19 = new Places();
+        item19.setPlace_name("Dalhousie University Bookstore");
+        item19.setPlace_description("");
+        item19.setPlace_ratings(4.3);
+        item19.setPlace_type("Store");
+        item19.setPlace_lat(44.637046);
+        item19.setPlace_lng(-63.589257);
+        PlacesItems.add(item19);
+
+        Places item20 = new Places();
+        item20.setPlace_name("Dalhousie University Bookstore");
+        item20.setPlace_description("");
+        item20.setPlace_ratings(4.3);
+        item20.setPlace_type("Store");
+        item20.setPlace_lat(44.637046);
+        item20.setPlace_lng(-63.589257);
+        PlacesItems.add(item20);
+
+
+
+
 
         return PlacesItems;
     }
