@@ -25,7 +25,7 @@ public class HelpLineActivity extends AppCompatActivity {
 
         mAdapter = new HelpLineAdapter(HelpData);
         recyclerView.setAdapter(mAdapter);
-
+        getSupportActionBar().setTitle("Student Help Line");
     }
 
     private TreeMap<String,String> SetHelpLine(){

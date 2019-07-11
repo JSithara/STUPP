@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Home");
         ImageView Campus = findViewById(R.id.campus_icon);
         ImageView Events = findViewById(R.id.events_icon);
         ImageView Checklist = findViewById(R.id.check_list_icon);

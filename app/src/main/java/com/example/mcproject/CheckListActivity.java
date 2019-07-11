@@ -35,6 +35,8 @@ public class CheckListActivity extends AppCompatActivity {
         mAdapter = new CheckListAdapter(Data);
         recyclerView.setAdapter(mAdapter);
 
+        getSupportActionBar().setTitle("Student CheckList");
+
         TextView mobile_app_recommender = findViewById(R.id.mobile_app_recommender);
         mobile_app_recommender.setOnClickListener(new View.OnClickListener() {
             @Override

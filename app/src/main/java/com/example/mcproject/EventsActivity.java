@@ -8,5 +8,6 @@ public class EventsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events_activity);
+        getSupportActionBar().setTitle("Events");
     }
 }

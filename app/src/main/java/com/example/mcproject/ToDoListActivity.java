@@ -27,6 +27,7 @@ public class ToDoListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.to_do_list_activity);
+        getSupportActionBar().setTitle("Student To Do List");
 
         List<to_do_list> Data = database.getAppDatabase(getApplicationContext()).to_do_listDAO().getAll();
         Log.d("Data_list_COUNT",Data.size()+"");

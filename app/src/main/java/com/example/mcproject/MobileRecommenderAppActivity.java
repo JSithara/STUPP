@@ -16,6 +16,7 @@ public class MobileRecommenderAppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mobile_app_recommender_activity);
+        getSupportActionBar().setTitle("Mobile Applications Recommender");
         TreeMap<String,String> MobileAppData = SetMobileData();
         recyclerView = (RecyclerView) findViewById(R.id.mobile_app_recommender_recycler_view);
         recyclerView.setHasFixedSize(true);

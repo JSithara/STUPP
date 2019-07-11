@@ -21,7 +21,7 @@ import com.example.mcproject.database.toDoList.to_do_listDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 17, exportSchema = false)
+@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 18, exportSchema = false)
 public abstract class database extends RoomDatabase {
     private static database INSTANCE;
 
