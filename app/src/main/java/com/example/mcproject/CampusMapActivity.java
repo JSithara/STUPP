@@ -9,6 +9,8 @@ import android.util.Log;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.mcproject.database.database;
+import com.example.mcproject.database.places.Places;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,10 +23,14 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CampusMapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     public static GoogleMap mMap;
     public static Marker mMarker;
+    public static List<Marker> PlaceMarkers = new ArrayList<Marker>();
     private FusedLocationProviderClient fusedLocationClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +67,12 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
                             }
                         }
                     });
+        }
+        List<Places> places = database.getAppDatabase(getApplicationContext()).placeDAO().getAll();
+        for(Places place : places){
+            LatLng CurrentLocation = new LatLng(place.place_lat, place.place_lng);
+            Marker marker = mMap.addMarker(new MarkerOptions().position(CurrentLocation).title(place.getPlace_name()));
+            PlaceMarkers.add(marker);
         }
 
     }
