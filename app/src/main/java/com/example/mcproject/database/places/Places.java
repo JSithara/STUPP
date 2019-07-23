@@ -14,8 +14,8 @@ public class Places {
     public double place_lat;
     public double place_lng;
     public double place_ratings;
-    public String place_img_1;
-    public  String place_img_2;
+    public int place_img_1;
+    public  int place_img_2;
 
     public int getPlace_id() {
         return place_id;
@@ -73,19 +73,19 @@ public class Places {
         this.place_type = place_type;
     }
 
-    public String getPlace_img_1() {
+    public int getPlace_img_1() {
         return place_img_1;
     }
 
-    public String getPlace_img_2() {
+    public int getPlace_img_2() {
         return place_img_2;
     }
 
-    public void setPlace_img_1(String place_img_1) {
+    public void setPlace_img_1(int place_img_1) {
         this.place_img_1 = place_img_1;
     }
 
-    public void setPlace_img_2(String place_img_2) {
+    public void setPlace_img_2(int place_img_2) {
         this.place_img_2 = place_img_2;
     }
 }

@@ -9,17 +9,18 @@ public class event {
     public int event_id;
 
     public String event_name;
-    public String place_id;
+    public int place_id;
     public String event_time;
     public String event_date;
     public String event_Description;
-    public String event_Banner_link;
+    public int event_Banner_link;
+    public boolean isAttending;
 
     public int getEvent_id() {
         return event_id;
     }
 
-    public String getEvent_Banner_link() {
+    public int getEvent_Banner_link() {
         return event_Banner_link;
     }
 
@@ -35,7 +36,7 @@ public class event {
         return event_time;
     }
 
-    public String getPlace_id() {
+    public int getPlace_id() {
         return place_id;
     }
 
@@ -43,12 +44,20 @@ public class event {
         return event_date;
     }
 
-    public void setEvent_Banner_link(String event_Banner_link) {
+    public void setEvent_Banner_link(int event_Banner_link) {
         this.event_Banner_link = event_Banner_link;
     }
 
     public void setEvent_Description(String event_Description) {
         this.event_Description = event_Description;
+    }
+
+    public void setAttending(boolean attending) {
+        isAttending = attending;
+    }
+
+    public boolean isAttending() {
+        return isAttending;
     }
 
     public void setEvent_id(int event_id) {
@@ -63,7 +72,7 @@ public class event {
         this.event_time = event_time;
     }
 
-    public void setPlace_id(String place_id) {
+    public void setPlace_id(int place_id) {
         this.place_id = place_id;
     }
 

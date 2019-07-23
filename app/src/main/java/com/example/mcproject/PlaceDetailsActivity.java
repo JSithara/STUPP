@@ -21,6 +21,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
     Button imageToggle;
     ImageView place_image;
     int place_id;
+    int current_image = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
             place_id = extras.getInt("place_id");
         }
         getSupportActionBar().setTitle("Place Details");
-         Places place = database.getAppDatabase(getApplicationContext()).placeDAO().loadById(place_id);
+         final Places place = database.getAppDatabase(getApplicationContext()).placeDAO().loadById(place_id);
          title = findViewById(R.id.place_detail_title);
          description = findViewById(R.id.place_detail_description);
          ratings = findViewById(R.id.place_detail_ratings);
@@ -40,6 +41,8 @@ public class PlaceDetailsActivity extends AppCompatActivity {
          title.setText(place.getPlace_name());
          description.setText(place.getPlace_description());
          ratings.setText(place.getPlace_ratings()+"");
+         place_image.setImageResource(place.getPlace_img_1());
+
 
          navigate.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -51,7 +54,13 @@ public class PlaceDetailsActivity extends AppCompatActivity {
          imageToggle.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-
+                if(current_image==1){
+                    current_image = 2;
+                    place_image.setImageResource(place.getPlace_img_2());
+                }else{
+                    current_image = 1;
+                    place_image.setImageResource(place.getPlace_img_1());
+                }
              }
          });
 

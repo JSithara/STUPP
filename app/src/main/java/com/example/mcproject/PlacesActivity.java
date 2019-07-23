@@ -32,7 +32,7 @@ public class PlacesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),PlaceTypeActivity.class);
-                i.putExtra("place_type","buildings");
+                i.putExtra("place_type","Buildings");
                 startActivity(i);
             }
         });
@@ -41,7 +41,7 @@ public class PlacesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),PlaceTypeActivity.class);
-                i.putExtra("place_type","stores");
+                i.putExtra("place_type","Stores");
                 startActivity(i);
             }
         });
@@ -50,7 +50,7 @@ public class PlacesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),PlaceTypeActivity.class);
-                i.putExtra("place_type","restaurants");
+                i.putExtra("place_type","Restaurants");
                 startActivity(i);
             }
         });

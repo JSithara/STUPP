@@ -27,6 +27,9 @@ public interface eventDAO {
     @Query("SELECT * FROM event WHERE event_date = :event_date")
     event findByDate(String event_date);
 
+    @Query("UPDATE event set isAttending = :attending_status where event_id = :event_id")
+    int setAttendingStatus(int event_id,boolean attending_status);
+
     @Insert
     void insertAll(event... events);
 

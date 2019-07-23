@@ -7,6 +7,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.mcproject.R;
 import com.example.mcproject.database.checklist.Checklist;
 import com.example.mcproject.database.checklist.ChecklistDAO;
 import com.example.mcproject.database.events.event;
@@ -21,7 +22,7 @@ import com.example.mcproject.database.toDoList.to_do_listDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 21, exportSchema = false)
+@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 23, exportSchema = false)
 public abstract class database extends RoomDatabase {
     private static database INSTANCE;
 
@@ -141,14 +142,68 @@ public abstract class database extends RoomDatabase {
     private static List<event> getEventsData(){
         List<event> EventsItems= new ArrayList<event>();
 
-//        event item1 = new event();
-//        item1.setEvent_name("Bric NS Student Seminar Series");
-//        item1.setEvent_Banner_link("");
-//        item1.setEvent_date("");
-//        item1.setEvent_Description("");
-//        item1.setEvent_time("");
-//        EventsItems.add(item1);
+        event item1 = new event();
+        item1.setEvent_name("Bric NS Student Seminar Series");
+        item1.setEvent_Banner_link(R.drawable.seminar);
+        item1.setEvent_date("31 July 2019");
+        item1.setEvent_Description("Seminar");
+        item1.setEvent_time("6:00 PM");
+        item1.setPlace_id(2);
+        EventsItems.add(item1);
 
+        event item2 = new event();
+        item2.setEvent_name("Faculty Of Science Talk");
+        item2.setEvent_Banner_link(R.drawable.seminar);
+        item2.setEvent_date("2 August 2019");
+        item2.setEvent_Description("Seminar");
+        item2.setEvent_time("6:00 PM");
+        item2.setPlace_id(2);
+        EventsItems.add(item2);
+
+        event item3 = new event();
+        item3.setEvent_name("Dalhousie Orientation Week");
+        item3.setEvent_Banner_link(R.drawable.seminar);
+        item3.setEvent_date("1 August 2019");
+        item3.setEvent_Description("Seminar");
+        item3.setEvent_time("9:00 AM");
+        item3.setPlace_id(6);
+        EventsItems.add(item3);
+
+        event item4 = new event();
+        item4.setEvent_name("Annual Computer Science Meeting");
+        item4.setEvent_Banner_link(R.drawable.meeting);
+        item4.setEvent_date("31 July 2019");
+        item4.setEvent_Description("Meeting");
+        item4.setEvent_time("6:00 PM");
+        item4.setPlace_id(2);
+        EventsItems.add(item4);
+
+        event item5 = new event();
+        item5.setEvent_name("Beat The Heat Summer");
+        item5.setEvent_Banner_link(R.drawable.party);
+        item5.setEvent_date("29 July 2019");
+        item5.setEvent_Description("Party");
+        item5.setEvent_time("2:00 PM");
+        item5.setPlace_id(6);
+        EventsItems.add(item5);
+
+        event item6 = new event();
+        item6.setEvent_name("Computer Science BBQ");
+        item6.setEvent_Banner_link(R.drawable.party);
+        item6.setEvent_date("30 July 2019");
+        item6.setEvent_Description("Party");
+        item6.setEvent_time("6:00 PM");
+        item6.setPlace_id(6);
+        EventsItems.add(item6);
+
+        event item7 = new event();
+        item7.setEvent_name("Big Data Seminar");
+        item7.setEvent_Banner_link(R.drawable.seminar);
+        item7.setEvent_date("30 September 2019");
+        item7.setEvent_Description("Seminar");
+        item7.setEvent_time("6:00 PM");
+        item7.setPlace_id(2);
+        EventsItems.add(item7);
 
 
         return EventsItems;
@@ -159,173 +214,211 @@ public abstract class database extends RoomDatabase {
 
         Places item1 = new Places();
         item1.setPlace_name("Dalhousie University Bookstore");
-        item1.setPlace_description("");
+        item1.setPlace_description("Dalhousie Building | Stores | Books | Clothes | Stationary");
         item1.setPlace_ratings(4.3);
         item1.setPlace_type("Stores");
         item1.setPlace_lat(44.637046);
         item1.setPlace_lng(-63.589257);
+        item1.setPlace_img_1(R.drawable.bookstore_1);
+        item1.setPlace_img_2(R.drawable.bookstore_2);
         PlacesItems.add(item1);
 
         Places item2 = new Places();
         item2.setPlace_name("Mona Campell Building");
-        item2.setPlace_description("");
+        item2.setPlace_description("Dalhousie Building | Classses");
         item2.setPlace_ratings(4.8);
         item2.setPlace_type("Buildings");
         item2.setPlace_lat(44.639161);
         item2.setPlace_lng(-63.590572);
+        item2.setPlace_img_1(R.drawable.mona_campell_1);
+        item2.setPlace_img_2(R.drawable.mona_campell_2);
         PlacesItems.add(item2);
 
         Places item3 = new Places();
         item3.setPlace_name("Coburg Social Bar & Café");
-        item3.setPlace_description("");
+        item3.setPlace_description("Coffee | Tea | Social Hangout | Food");
         item3.setPlace_ratings(4.4);
         item3.setPlace_type("Restaurants");
         item3.setPlace_lat(44.639831);
         item3.setPlace_lng(-63.588987);
+        item3.setPlace_img_1(R.drawable.colburg_1);
+        item3.setPlace_img_2(R.drawable.colburg_2);
         PlacesItems.add(item3);
 
         Places item4 = new Places();
         item4.setPlace_name("Dalplex");
-        item4.setPlace_description("");
+        item4.setPlace_description("Dalhousie Building | Gym | Field | Track | Fitness");
         item4.setPlace_ratings(4.0);
         item4.setPlace_type("Buildings");
         item4.setPlace_lat(44.634085);
         item4.setPlace_lng(-63.591314);
+        item4.setPlace_img_1(R.drawable.daplex_1);
+        item4.setPlace_img_2(R.drawable.daplex_2);
         PlacesItems.add(item4);
 
         Places item5 = new Places();
         item5.setPlace_name("Killam Memorial Library");
-        item5.setPlace_description("");
+        item5.setPlace_description("Dalhousie Building | Books | Coffee | Restaurant");
         item5.setPlace_ratings(4.5);
         item5.setPlace_type("Stores");
         item5.setPlace_lat(44.637446);
         item5.setPlace_lng(-63.591188);
+        item5.setPlace_img_1(R.drawable.killiam_1);
+        item5.setPlace_img_2(R.drawable.killiam_2);
         PlacesItems.add(item5);
 
         Places item6 = new Places();
         item6.setPlace_name("Student Union Building");
-        item6.setPlace_description("");
+        item6.setPlace_description("Dalhousie Building | Books | Coffee | Restaurant");
         item6.setPlace_ratings(4.3);
         item6.setPlace_type("Buildings");
         item6.setPlace_lat(44.636758 );
         item6.setPlace_lng(-63.588860);
+        item6.setPlace_img_1(R.drawable.bookstore_1);
+        item6.setPlace_img_2(R.drawable.sub_2);
         PlacesItems.add(item6);
 
         Places item7 = new Places();
         item7.setPlace_name("Marion McCain Arts and Social Sciences Building");
-        item7.setPlace_description("");
+        item7.setPlace_description("Dalhousie Building | Classes | Art");
         item7.setPlace_ratings(5);
         item7.setPlace_type("Buildings");
         item7.setPlace_lat(44.639831);
         item7.setPlace_lng(-63.588987);
+        item7.setPlace_img_1(R.drawable.mcain_arts_1);
+        item7.setPlace_img_2(R.drawable.mcain_arts_2);
         PlacesItems.add(item7);
 
         Places item8 = new Places();
         item8.setPlace_name("Kenneth C. Rowe Management Building");
-        item8.setPlace_description("");
+        item8.setPlace_description("Dalhousie Building | Coffee | Restaurant");
         item8.setPlace_ratings(4.0);
         item8.setPlace_type("Buildings");
         item8.setPlace_lat(44.637071);
         item8.setPlace_lng(-63.588235);
+        item8.setPlace_img_1(R.drawable.kenneth_1);
+        item8.setPlace_img_2(R.drawable.kenneth_2);
         PlacesItems.add(item8);
 
         Places item9 = new Places();
         item9.setPlace_name("Dalhousie Department of Physics & Atmospheric Science");
-        item9.setPlace_description("");
+        item9.setPlace_description("Dalhousie Building | Books | Classes");
         item9.setPlace_ratings(3.5);
         item9.setPlace_type("Buildings");
         item9.setPlace_lat(44.638026);
         item9.setPlace_lng(-63.593457);
+        item9.setPlace_img_1(R.drawable.chemistry_building_1);
+        item9.setPlace_img_2(R.drawable.chemistry_building_1);
         PlacesItems.add(item9);
 
         Places item10 = new Places();
         item10.setPlace_name("Dalhousie Arts Centre");
-        item10.setPlace_description("");
+        item10.setPlace_description("Dalhousie Building | Books | Classes");
         item10.setPlace_ratings(4.3);
         item10.setPlace_type("Buildings");
         item10.setPlace_lat(44.638151);
         item10.setPlace_lng(-63.588472);
+        item10.setPlace_img_1(R.drawable.mcain_arts_1);
+        item10.setPlace_img_2(R.drawable.mcain_arts_2);
         PlacesItems.add(item10);
 
         Places item11 = new Places();
         item11.setPlace_name("Chemistry Building");
-        item11.setPlace_description("");
+        item11.setPlace_description("Dalhousie Building | Books | Classes | Research");
         item11.setPlace_ratings(5);
         item11.setPlace_type("Buildings");
         item11.setPlace_lat(44.636894);
         item11.setPlace_lng(-63.591983);
+        item11.setPlace_img_1(R.drawable.chemistry_building_1);
+        item11.setPlace_img_2(R.drawable.chemistry_building_2);
         PlacesItems.add(item11);
 
         Places item12 = new Places();
         item12.setPlace_name("Dalhousie Community Garden");
-        item12.setPlace_description("");
+        item12.setPlace_description("Dalhousie Building | Relaxation");
         item12.setPlace_ratings(4.3);
         item12.setPlace_type("Buildings");
         item12.setPlace_lat(44.637206);
         item12.setPlace_lng(-63.587280);
+        item12.setPlace_img_1(R.drawable.killiam_1);
+        item12.setPlace_img_2(R.drawable.killiam_2);
         PlacesItems.add(item12);
 
         Places item13 = new Places();
         item13.setPlace_name("Dalhousie Security Services");
-        item13.setPlace_description("");
+        item13.setPlace_description("Dalhousie Building");
         item13.setPlace_ratings(3.8);
         item13.setPlace_type("Buildings");
         item13.setPlace_lat(44.637471);
         item13.setPlace_lng(-63.589465);
+        item13.setPlace_img_1(R.drawable.chemistry_building_1);
+        item13.setPlace_img_2(R.drawable.chemistry_building_2);
         PlacesItems.add(item13);
 
         Places item14 = new Places();
         item14.setPlace_name("Goldberg Computer Science Building");
-        item14.setPlace_description("");
+        item14.setPlace_description("Dalhousie Building | Books | Coffee | Restaurant");
         item14.setPlace_ratings(5);
         item14.setPlace_type("Buildings");
         item14.setPlace_lat(44.637631);
         item14.setPlace_lng(-63.587209);
+        item14.setPlace_img_1(R.drawable.goldberg_1);
+        item14.setPlace_img_2(R.drawable.goldberg_2);
         PlacesItems.add(item14);
 
         Places item15 = new Places();
         item15.setPlace_name("Tim hortons");
-        item15.setPlace_description("");
+        item15.setPlace_description("Coffee | Restaurant");
         item15.setPlace_ratings(3.4);
         item15.setPlace_type("Restaurants");
         item15.setPlace_lat(44.637811);
         item15.setPlace_lng(-63.584041);
+        item1.setPlace_img_1(R.drawable.bookstore_1);
+        item1.setPlace_img_2(R.drawable.bookstore_2);
         PlacesItems.add(item15);
 
         Places item16 = new Places();
         item16.setPlace_name("Dalhousie University Bookstore");
-        item16.setPlace_description("");
+        item16.setPlace_description("Dalhousie Building | Books | Items");
         item16.setPlace_ratings(4.3);
         item16.setPlace_type("Stores");
         item16.setPlace_lat(44.637046);
         item16.setPlace_lng(-63.589257);
+        item16.setPlace_img_1(R.drawable.bookstore_1);
+        item16.setPlace_img_2(R.drawable.bookstore_2);
         PlacesItems.add(item16);
 
         Places item17 = new Places();
         item17.setPlace_name("Henry Hicks Building");
-        item17.setPlace_description("");
+        item17.setPlace_description("Dalhousie Building | Classes | Research");
         item17.setPlace_ratings(5);
         item17.setPlace_type("Buildings");
         item17.setPlace_lat(44.636403);
         item17.setPlace_lng(-63.593105);
+        item17.setPlace_img_1(R.drawable.chemistry_building_1);
+        item17.setPlace_img_2(R.drawable.chemistry_building_2);
         PlacesItems.add(item17);
 
         Places item18 = new Places();
         item18.setPlace_name("Walmart");
-        item18.setPlace_description("");
+        item18.setPlace_description("Items | Clothes | Provisions | Coffee | Restaurant");
         item18.setPlace_ratings(3.7);
         item18.setPlace_type("Stores");
         item18.setPlace_lat(44.646584);
         item18.setPlace_lng(-63.620721);
+        item18.setPlace_img_1(R.drawable.walmart_1);
+        item18.setPlace_img_2(R.drawable.walmart_2);
         PlacesItems.add(item18);
 
         Places item19 = new Places();
         item19.setPlace_name("Dollarama");
-        item19.setPlace_description("");
+        item19.setPlace_description("Affordable | Items | Provisions ");
         item19.setPlace_ratings(4.0);
         item19.setPlace_type("Stores");
         item19.setPlace_lat(44.642812);
         item19.setPlace_lng(-63.578542);
+        item19.setPlace_img_1(R.drawable.parklane_1);
+        item19.setPlace_img_2(R.drawable.parklane_2);
         PlacesItems.add(item19);
 
         Places item20 = new Places();
@@ -335,6 +428,8 @@ public abstract class database extends RoomDatabase {
         item20.setPlace_type("Stores");
         item20.setPlace_lat(44.646749);
         item20.setPlace_lng(-63.594688);
+        item20.setPlace_img_1(R.drawable.superstore_1);
+        item20.setPlace_img_2(R.drawable.superstore_2);
         PlacesItems.add(item20);
 
         Places item21 = new Places();
@@ -344,6 +439,8 @@ public abstract class database extends RoomDatabase {
         item21.setPlace_type("Restaurants");
         item21.setPlace_lat(44.642812);
         item21.setPlace_lng(-63.578542);
+        item21.setPlace_img_1(R.drawable.parklane_1);
+        item21.setPlace_img_2(R.drawable.parklane_2);
         PlacesItems.add(item21);
 
         Places item22 = new Places();
@@ -353,6 +450,8 @@ public abstract class database extends RoomDatabase {
         item22.setPlace_type("Restaurants");
         item22.setPlace_lat(44.645314);
         item22.setPlace_lng(-63.598078);
+        item22.setPlace_img_1(R.drawable.parklane_1);
+        item22.setPlace_img_2(R.drawable.parklane_2);
         PlacesItems.add(item22);
 
 
