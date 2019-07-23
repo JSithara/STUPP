@@ -16,11 +16,14 @@ public interface placesDAO {
     @Query("SELECT * FROM Places WHERE place_id IN (:placeids)")
     List<Places> loadAllByIds(int[] placeids);
 
+    @Query("SELECT * FROM Places WHERE place_id = :placeid")
+    Places loadById(int placeid);
+
     @Query("SELECT * FROM Places WHERE place_name LIKE :place_name")
     Places findByName(String place_name);
 
     @Query("SELECT * FROM Places WHERE place_type LIKE :place_type")
-    Places findByType(String place_type);
+    List<Places> findByType(String place_type);
 
     @Query("SELECT * FROM Places WHERE place_ratings LIKE :place_ratings")
     Places findByRatings(String place_ratings);

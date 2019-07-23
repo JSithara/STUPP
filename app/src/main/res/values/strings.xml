@@ -12,4 +12,6 @@
     <string name="weather_type">Cloudy</string>
     <string name="txt_m_app_recommender">Mobile App Recommender</string>
     <string name="check_status">Done</string>
+    <string name="toggle_image">Toggle</string>
+    <string name="place_navigate">Navigate To Place</string>
 </resources>

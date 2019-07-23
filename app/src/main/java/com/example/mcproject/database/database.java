@@ -21,7 +21,7 @@ import com.example.mcproject.database.toDoList.to_do_listDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 19, exportSchema = false)
+@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 21, exportSchema = false)
 public abstract class database extends RoomDatabase {
     private static database INSTANCE;
 
@@ -161,7 +161,7 @@ public abstract class database extends RoomDatabase {
         item1.setPlace_name("Dalhousie University Bookstore");
         item1.setPlace_description("");
         item1.setPlace_ratings(4.3);
-        item1.setPlace_type("Store");
+        item1.setPlace_type("Stores");
         item1.setPlace_lat(44.637046);
         item1.setPlace_lng(-63.589257);
         PlacesItems.add(item1);
@@ -170,7 +170,7 @@ public abstract class database extends RoomDatabase {
         item2.setPlace_name("Mona Campell Building");
         item2.setPlace_description("");
         item2.setPlace_ratings(4.8);
-        item2.setPlace_type("Building");
+        item2.setPlace_type("Buildings");
         item2.setPlace_lat(44.639161);
         item2.setPlace_lng(-63.590572);
         PlacesItems.add(item2);
@@ -179,25 +179,25 @@ public abstract class database extends RoomDatabase {
         item3.setPlace_name("Coburg Social Bar & Café");
         item3.setPlace_description("");
         item3.setPlace_ratings(4.4);
-        item3.setPlace_type("Restaurant");
+        item3.setPlace_type("Restaurants");
         item3.setPlace_lat(44.639831);
         item3.setPlace_lng(-63.588987);
         PlacesItems.add(item3);
 
         Places item4 = new Places();
-        item4.setPlace_name("Dalhousie Permit Parking");
+        item4.setPlace_name("Dalplex");
         item4.setPlace_description("");
         item4.setPlace_ratings(4.0);
         item4.setPlace_type("Buildings");
-        item4.setPlace_lat(44.639831);
-        item4.setPlace_lng(-63.589116);
+        item4.setPlace_lat(44.634085);
+        item4.setPlace_lng(-63.591314);
         PlacesItems.add(item4);
 
         Places item5 = new Places();
         item5.setPlace_name("Killam Memorial Library");
         item5.setPlace_description("");
         item5.setPlace_ratings(4.5);
-        item5.setPlace_type("Store");
+        item5.setPlace_type("Stores");
         item5.setPlace_lat(44.637446);
         item5.setPlace_lng(-63.591188);
         PlacesItems.add(item5);
@@ -206,7 +206,7 @@ public abstract class database extends RoomDatabase {
         item6.setPlace_name("Student Union Building");
         item6.setPlace_description("");
         item6.setPlace_ratings(4.3);
-        item6.setPlace_type("Building");
+        item6.setPlace_type("Buildings");
         item6.setPlace_lat(44.636758 );
         item6.setPlace_lng(-63.588860);
         PlacesItems.add(item6);
@@ -215,7 +215,7 @@ public abstract class database extends RoomDatabase {
         item7.setPlace_name("Marion McCain Arts and Social Sciences Building");
         item7.setPlace_description("");
         item7.setPlace_ratings(5);
-        item7.setPlace_type("Building");
+        item7.setPlace_type("Buildings");
         item7.setPlace_lat(44.639831);
         item7.setPlace_lng(-63.588987);
         PlacesItems.add(item7);
@@ -224,7 +224,7 @@ public abstract class database extends RoomDatabase {
         item8.setPlace_name("Kenneth C. Rowe Management Building");
         item8.setPlace_description("");
         item8.setPlace_ratings(4.0);
-        item8.setPlace_type("Building");
+        item8.setPlace_type("Buildings");
         item8.setPlace_lat(44.637071);
         item8.setPlace_lng(-63.588235);
         PlacesItems.add(item8);
@@ -233,7 +233,7 @@ public abstract class database extends RoomDatabase {
         item9.setPlace_name("Dalhousie Department of Physics & Atmospheric Science");
         item9.setPlace_description("");
         item9.setPlace_ratings(3.5);
-        item9.setPlace_type("Building");
+        item9.setPlace_type("Buildings");
         item9.setPlace_lat(44.638026);
         item9.setPlace_lng(-63.593457);
         PlacesItems.add(item9);
@@ -242,7 +242,7 @@ public abstract class database extends RoomDatabase {
         item10.setPlace_name("Dalhousie Arts Centre");
         item10.setPlace_description("");
         item10.setPlace_ratings(4.3);
-        item10.setPlace_type("Building");
+        item10.setPlace_type("Buildings");
         item10.setPlace_lat(44.638151);
         item10.setPlace_lng(-63.588472);
         PlacesItems.add(item10);
@@ -251,7 +251,7 @@ public abstract class database extends RoomDatabase {
         item11.setPlace_name("Chemistry Building");
         item11.setPlace_description("");
         item11.setPlace_ratings(5);
-        item11.setPlace_type("Building");
+        item11.setPlace_type("Buildings");
         item11.setPlace_lat(44.636894);
         item11.setPlace_lng(-63.591983);
         PlacesItems.add(item11);
@@ -260,7 +260,7 @@ public abstract class database extends RoomDatabase {
         item12.setPlace_name("Dalhousie Community Garden");
         item12.setPlace_description("");
         item12.setPlace_ratings(4.3);
-        item12.setPlace_type("Building");
+        item12.setPlace_type("Buildings");
         item12.setPlace_lat(44.637206);
         item12.setPlace_lng(-63.587280);
         PlacesItems.add(item12);
@@ -269,7 +269,7 @@ public abstract class database extends RoomDatabase {
         item13.setPlace_name("Dalhousie Security Services");
         item13.setPlace_description("");
         item13.setPlace_ratings(3.8);
-        item13.setPlace_type("Building");
+        item13.setPlace_type("Buildings");
         item13.setPlace_lat(44.637471);
         item13.setPlace_lng(-63.589465);
         PlacesItems.add(item13);
@@ -278,7 +278,7 @@ public abstract class database extends RoomDatabase {
         item14.setPlace_name("Goldberg Computer Science Building");
         item14.setPlace_description("");
         item14.setPlace_ratings(5);
-        item14.setPlace_type("Building");
+        item14.setPlace_type("Buildings");
         item14.setPlace_lat(44.637631);
         item14.setPlace_lng(-63.587209);
         PlacesItems.add(item14);
@@ -287,7 +287,7 @@ public abstract class database extends RoomDatabase {
         item15.setPlace_name("Tim hortons");
         item15.setPlace_description("");
         item15.setPlace_ratings(3.4);
-        item15.setPlace_type("Restaurant");
+        item15.setPlace_type("Restaurants");
         item15.setPlace_lat(44.637811);
         item15.setPlace_lng(-63.584041);
         PlacesItems.add(item15);
@@ -296,7 +296,7 @@ public abstract class database extends RoomDatabase {
         item16.setPlace_name("Dalhousie University Bookstore");
         item16.setPlace_description("");
         item16.setPlace_ratings(4.3);
-        item16.setPlace_type("Store");
+        item16.setPlace_type("Stores");
         item16.setPlace_lat(44.637046);
         item16.setPlace_lng(-63.589257);
         PlacesItems.add(item16);
@@ -305,7 +305,7 @@ public abstract class database extends RoomDatabase {
         item17.setPlace_name("Henry Hicks Building");
         item17.setPlace_description("");
         item17.setPlace_ratings(5);
-        item17.setPlace_type("Building");
+        item17.setPlace_type("Buildings");
         item17.setPlace_lat(44.636403);
         item17.setPlace_lng(-63.593105);
         PlacesItems.add(item17);
@@ -314,7 +314,7 @@ public abstract class database extends RoomDatabase {
         item18.setPlace_name("Walmart");
         item18.setPlace_description("");
         item18.setPlace_ratings(3.7);
-        item18.setPlace_type("Store");
+        item18.setPlace_type("Stores");
         item18.setPlace_lat(44.646584);
         item18.setPlace_lng(-63.620721);
         PlacesItems.add(item18);
@@ -323,7 +323,7 @@ public abstract class database extends RoomDatabase {
         item19.setPlace_name("Dollarama");
         item19.setPlace_description("");
         item19.setPlace_ratings(4.0);
-        item19.setPlace_type("Store");
+        item19.setPlace_type("Stores");
         item19.setPlace_lat(44.642812);
         item19.setPlace_lng(-63.578542);
         PlacesItems.add(item19);
@@ -332,7 +332,7 @@ public abstract class database extends RoomDatabase {
         item20.setPlace_name("Super Store");
         item20.setPlace_description("Shopping, comfortable, affordable ");
         item20.setPlace_ratings(4.3);
-        item20.setPlace_type("Store");
+        item20.setPlace_type("Stores");
         item20.setPlace_lat(44.646749);
         item20.setPlace_lng(-63.594688);
         PlacesItems.add(item20);
@@ -341,7 +341,7 @@ public abstract class database extends RoomDatabase {
         item21.setPlace_name("Athens Restaurant");
         item21.setPlace_description("Relaxed mainstay serving a wide variety of Greek dishes, including vegan & gluten-free options.");
         item21.setPlace_ratings(4.0);
-        item21.setPlace_type("Restaurant");
+        item21.setPlace_type("Restaurants");
         item21.setPlace_lat(44.642812);
         item21.setPlace_lng(-63.578542);
         PlacesItems.add(item21);
@@ -350,7 +350,7 @@ public abstract class database extends RoomDatabase {
         item22.setPlace_name("Sweet Hereafter Cheesecakery");
         item22.setPlace_description("Food, Sweet, Cakes, romantic ");
         item22.setPlace_ratings(4.0);
-        item22.setPlace_type("Restaurant");
+        item22.setPlace_type("Restaurants");
         item22.setPlace_lat(44.645314);
         item22.setPlace_lng(-63.598078);
         PlacesItems.add(item22);

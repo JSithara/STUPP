@@ -35,26 +35,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CampusMapActivity">
+        <activity android:name=".CampusMapActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
-        <activity android:name=".CheckListActivity">
+        <activity android:name=".CheckListActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
-        <activity android:name=".MobileRecommenderAppActivity">
+        <activity android:name=".MobileRecommenderAppActivity"
+            android:parentActivityName=".CheckListActivity">
 
         </activity>
-        <activity android:name=".EventsActivity">
+        <activity android:name=".EventsActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
-        <activity android:name=".HelpLineActivity">
+        <activity android:name=".HelpLineActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
-        <activity android:name=".PlacesActivity">
+        <activity android:name=".PlacesActivity"
+            android:parentActivityName=".MainActivity">
 
         </activity>
-        <activity android:name=".ToDoListActivity">
+        <activity android:name=".ToDoListActivity"
+            android:parentActivityName=".MainActivity">
             
+        </activity>
+        <activity android:name=".PlaceTypeActivity"
+            android:parentActivityName=".PlacesActivity">
+
+        </activity>
+        <activity android:name=".PlaceDetailsActivity"
+            android:parentActivityName=".PlacesActivity">
+
         </activity>
     </application>
 
