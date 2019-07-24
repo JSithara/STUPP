@@ -1,5 +1,6 @@
 package com.example.mcproject;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -47,7 +48,9 @@ public class PlaceDetailsActivity extends AppCompatActivity {
          navigate.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-
+                 Intent intent = new Intent(v.getContext(),CampusMapActivity.class);
+                 intent.putExtra("place_id",place.place_id);
+                 v.getContext().startActivity(intent);
              }
          });
 

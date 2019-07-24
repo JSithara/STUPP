@@ -22,7 +22,7 @@ import com.example.mcproject.database.toDoList.to_do_listDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 23, exportSchema = false)
+@Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 28, exportSchema = false)
 public abstract class database extends RoomDatabase {
     private static database INSTANCE;
 
@@ -148,7 +148,14 @@ public abstract class database extends RoomDatabase {
         item1.setEvent_date("31 July 2019");
         item1.setEvent_Description("Seminar");
         item1.setEvent_time("6:00 PM");
+        item1.setYear(2019);
+        item1.setMonth(6);
+        item1.setDay(31);
+        item1.setHour(12);
+        item1.setMin(0);
+        item1.setSecond(30);
         item1.setPlace_id(2);
+        item1.setAttending(false);
         EventsItems.add(item1);
 
         event item2 = new event();
@@ -157,7 +164,14 @@ public abstract class database extends RoomDatabase {
         item2.setEvent_date("2 August 2019");
         item2.setEvent_Description("Seminar");
         item2.setEvent_time("6:00 PM");
+        item2.setYear(2019);
+        item2.setMonth(7);
+        item2.setDay(2);
+        item2.setHour(12);
+        item2.setMin(0);
+        item2.setSecond(0);
         item2.setPlace_id(2);
+        item2.setAttending(false);
         EventsItems.add(item2);
 
         event item3 = new event();
@@ -166,7 +180,14 @@ public abstract class database extends RoomDatabase {
         item3.setEvent_date("1 August 2019");
         item3.setEvent_Description("Seminar");
         item3.setEvent_time("9:00 AM");
+        item3.setYear(2019);
+        item3.setMonth(7);
+        item3.setDay(31);
+        item3.setHour(9);
+        item3.setMin(0);
+        item3.setSecond(0);
         item3.setPlace_id(6);
+        item3.setAttending(false);
         EventsItems.add(item3);
 
         event item4 = new event();
@@ -175,7 +196,14 @@ public abstract class database extends RoomDatabase {
         item4.setEvent_date("31 July 2019");
         item4.setEvent_Description("Meeting");
         item4.setEvent_time("6:00 PM");
+        item4.setYear(2019);
+        item4.setMonth(6);
+        item4.setDay(31);
+        item4.setHour(12);
+        item4.setMin(0);
+        item4.setSecond(0);
         item4.setPlace_id(2);
+        item4.setAttending(false);
         EventsItems.add(item4);
 
         event item5 = new event();
@@ -184,7 +212,14 @@ public abstract class database extends RoomDatabase {
         item5.setEvent_date("29 July 2019");
         item5.setEvent_Description("Party");
         item5.setEvent_time("2:00 PM");
+        item5.setYear(2019);
+        item5.setMonth(6);
+        item5.setDay(29);
+        item5.setHour(14);
+        item5.setMin(0);
+        item5.setSecond(0);
         item5.setPlace_id(6);
+        item5.setAttending(false);
         EventsItems.add(item5);
 
         event item6 = new event();
@@ -193,7 +228,14 @@ public abstract class database extends RoomDatabase {
         item6.setEvent_date("30 July 2019");
         item6.setEvent_Description("Party");
         item6.setEvent_time("6:00 PM");
+        item6.setYear(2019);
+        item6.setMonth(6);
+        item6.setDay(30);
+        item6.setHour(12);
+        item6.setMin(0);
+        item6.setSecond(0);
         item6.setPlace_id(6);
+        item6.setAttending(false);
         EventsItems.add(item6);
 
         event item7 = new event();
@@ -202,7 +244,14 @@ public abstract class database extends RoomDatabase {
         item7.setEvent_date("30 September 2019");
         item7.setEvent_Description("Seminar");
         item7.setEvent_time("6:00 PM");
+        item7.setYear(2019);
+        item7.setMonth(8);
+        item7.setDay(30);
+        item7.setHour(12);
+        item7.setMin(0);
+        item7.setSecond(30);
         item7.setPlace_id(2);
+        item7.setAttending(false);
         EventsItems.add(item7);
 
 
@@ -373,8 +422,8 @@ public abstract class database extends RoomDatabase {
         item15.setPlace_type("Restaurants");
         item15.setPlace_lat(44.637811);
         item15.setPlace_lng(-63.584041);
-        item1.setPlace_img_1(R.drawable.bookstore_1);
-        item1.setPlace_img_2(R.drawable.bookstore_2);
+        item15.setPlace_img_1(R.drawable.sub_1);
+        item15.setPlace_img_2(R.drawable.sub_2);
         PlacesItems.add(item15);
 
         Places item16 = new Places();

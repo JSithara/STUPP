@@ -10,6 +10,12 @@ public class event {
 
     public String event_name;
     public int place_id;
+    public int year;
+    public  int month;
+    public  int day;
+    public int hour;
+    public  int min;
+    public  int second;
     public String event_time;
     public String event_date;
     public String event_Description;
@@ -79,4 +85,54 @@ public class event {
     public void setEvent_date(String event_date) {
         this.event_date = event_date;
     }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMin() {
+        return min;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getSecond() {
+        return second;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setSecond(int second) {
+        this.second = second;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+
 }

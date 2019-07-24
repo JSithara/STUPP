@@ -15,6 +15,9 @@ public interface eventDAO {
     @Query("SELECT * FROM event WHERE event_id IN (:eventids)")
     List<event> loadAllByIds(int[] eventids);
 
+    @Query("SELECT * FROM event WHERE event_id = :eventids")
+    event loadById(int eventids);
+
     @Query("SELECT * FROM event WHERE event_name LIKE :event_name")
     event findByName(String event_name);
 
