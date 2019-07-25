@@ -53,7 +53,7 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
     public static List<Marker> PlaceMarkers = new ArrayList<Marker>();
     private FusedLocationProviderClient fusedLocationClient;
     private int destination_id = 0;
-    Button trackMe;
+    Button back;
     Button center;
     Button change_destination;
     @Override
@@ -70,10 +70,12 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        back = findViewById(R.id.back);
+        back.setText("Back");
         center = findViewById(R.id.center_me);
-        center.setText("Center To My Location");
+        center.setText("Recenter");
         change_destination = findViewById(R.id.change_destination);
-        change_destination.setText("Set Destination");
+        change_destination.setText("Destination");
 
         change_destination.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +90,14 @@ public class CampusMapActivity extends FragmentActivity implements OnMapReadyCal
             public void onClick(View v) {
                 setMyNewLocation();
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),MainActivity.class);
+                v.getContext().startActivity(intent);
             }
         });
     }

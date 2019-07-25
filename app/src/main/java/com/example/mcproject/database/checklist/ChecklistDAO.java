@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 
 import java.util.List;
-
+//This is the checklist DAO with all the queries to be performed on the Database entity
 @Dao
 public interface ChecklistDAO {
     @Query("SELECT * FROM Checklist")

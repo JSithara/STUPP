@@ -1,7 +1,7 @@
 package com.example.mcproject.database.toDoList;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+//Class is the Do_to_list entity with the setters and Getters
 @Entity
 public class to_do_list {
     @PrimaryKey(autoGenerate = true)

@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 
 import java.util.List;
-
+//This is the Places DAO with all the queries to be performed on the Database entity
 @Dao
 public interface placesDAO {
     @Query("SELECT * FROM Places")

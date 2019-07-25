@@ -3,7 +3,7 @@ package com.example.mcproject.database.checklist;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+//Class is the CheckList entity with the setters and Getters
 @Entity
 public class Checklist {
     @PrimaryKey(autoGenerate = true)

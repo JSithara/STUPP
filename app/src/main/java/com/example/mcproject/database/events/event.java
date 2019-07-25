@@ -2,7 +2,7 @@ package com.example.mcproject.database.events;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+//Class is the Event entity with the setters and Getters
 @Entity
 public class event {
     @PrimaryKey(autoGenerate = true)

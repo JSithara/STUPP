@@ -23,6 +23,8 @@ public class PlaceDetailsActivity extends AppCompatActivity {
     ImageView place_image;
     int place_id;
     int current_image = 1;
+
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
         if(extras != null) {
             place_id = extras.getInt("place_id");
         }
-        getSupportActionBar().setTitle("Place Details");
+        getSupportActionBar().setTitle("PLACE DETAILS");
          final Places place = database.getAppDatabase(getApplicationContext()).placeDAO().loadById(place_id);
          title = findViewById(R.id.place_detail_title);
          description = findViewById(R.id.place_detail_description);

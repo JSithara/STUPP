@@ -13,11 +13,13 @@ public class PlacesActivity extends AppCompatActivity {
     TextView buildings;
     TextView stores;
     TextView restaurants;
+
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.places_activity);
-        getSupportActionBar().setTitle("Places");
+        getSupportActionBar().setTitle("PLACES");
 
 
         buildings = findViewById(R.id.buildings);

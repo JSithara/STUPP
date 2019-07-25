@@ -20,6 +20,7 @@ public class CheckListActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ public class CheckListActivity extends AppCompatActivity {
         mAdapter = new CheckListAdapter(Data);
         recyclerView.setAdapter(mAdapter);
 
-        getSupportActionBar().setTitle("Student CheckList");
+        getSupportActionBar().setTitle("STUDENT CHECKLIST");
 
         TextView mobile_app_recommender = findViewById(R.id.mobile_app_recommender);
         mobile_app_recommender.setOnClickListener(new View.OnClickListener() {

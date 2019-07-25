@@ -23,11 +23,12 @@ public class ToDoListActivity extends AppCompatActivity {
     public RecyclerView.Adapter mAdapter;
     public RecyclerView.LayoutManager layoutManager;
 
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.to_do_list_activity);
-        getSupportActionBar().setTitle("Student To Do List");
+        getSupportActionBar().setTitle("STUDENT TO DO LIST");
 
         List<to_do_list> Data = database.getAppDatabase(getApplicationContext()).to_do_listDAO().getAll();
         Log.d("Data_list_COUNT",Data.size()+"");
@@ -48,7 +49,7 @@ public class ToDoListActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(v.getContext(), "Empty Text Input", Toast.LENGTH_SHORT);
                 if(textView !=  null){
                     String input = textView.getText().toString();
-                    if(!input.equals(" ")){
+                    if(input.length() != 0){
                         to_do_list item = new to_do_list();
                         item.setTo_do_list_item(input);
                         item.setTo_do_list_source_id(0);

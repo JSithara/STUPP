@@ -24,8 +24,8 @@ import java.util.List;
 
 @Database(entities = {Checklist.class, event.class, Places.class, PlacesImages.class, to_do_list.class}, version = 28, exportSchema = false)
 public abstract class database extends RoomDatabase {
+    // Declaration of variables and DAOS
     private static database INSTANCE;
-
     public abstract ChecklistDAO checklistDAO();
     public abstract eventDAO eventDAO();
     public abstract placesDAO placeDAO();
@@ -34,6 +34,7 @@ public abstract class database extends RoomDatabase {
 
     public static database getAppDatabase(Context context) {
         if (INSTANCE == null) {
+            //Setting of Database instance
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(), database.class, "database").allowMainThreadQueries().fallbackToDestructiveMigration().build();
             if(isCheckListEmpty(INSTANCE)){
                 populateDatabase(INSTANCE);
@@ -43,26 +44,32 @@ public abstract class database extends RoomDatabase {
         return INSTANCE;
     }
 
+    //This Methods Adds Events to the Database
     private static void addEvent(event input,final database db){
         db.eventDAO().insertAll(input);
     }
 
+    //This Method add Checklist objects to the database
     private static void addCheckList(Checklist input,final database db){
         db.checklistDAO().insertAll(input);
     }
 
+    //This method adds place objects to the database
     private static void addPlace(Places input,final database db){
         db.placeDAO().insertAll(input);
     }
 
+    //This MEthod adds To Do List Objects to the Database
     private static void addTo_do_list(to_do_list input,final database db){
         db.to_do_listDAO().insertAll(input);
     }
 
+    //This Method Adds Place Images to the database
     private static void addAPlace_image(PlacesImages input,final database db){
         db.place_imageDAO().insertAll(input);
     }
 
+    //This method Populate the database with default values if it is empty
     private static void populateDatabase(final database db){
        for(Checklist item : getChecklistData()){
            addCheckList(item,db);
@@ -86,6 +93,7 @@ public abstract class database extends RoomDatabase {
 
     }
 
+    //This Method returns a list of checklist objects to populate the database
     private static List<Checklist> getChecklistData(){
         List<Checklist> CheckListItems= new ArrayList<Checklist>();
 
@@ -139,6 +147,7 @@ public abstract class database extends RoomDatabase {
         return CheckListItems;
     }
 
+    //This Method returns a list of event objects to populate the database
     private static List<event> getEventsData(){
         List<event> EventsItems= new ArrayList<event>();
 
@@ -258,6 +267,7 @@ public abstract class database extends RoomDatabase {
         return EventsItems;
     }
 
+    //This Method returns a list of Places objects to populate the database
     private static List<Places> getPlacesData(){
         List<Places> PlacesItems= new ArrayList<Places>();
 
@@ -510,6 +520,7 @@ public abstract class database extends RoomDatabase {
         return PlacesItems;
     }
 
+    //This Method returns a list of place image objects to populate the database
     private static List<PlacesImages> getPlacesImageData(){
         List<PlacesImages> PlacesImagesItems= new ArrayList<PlacesImages>();
 
@@ -522,6 +533,7 @@ public abstract class database extends RoomDatabase {
         return PlacesImagesItems;
     }
 
+    //This Method returns a list of to do list objects to populate the database
     private static List<to_do_list> getToDoListData(){
         List<to_do_list> ToDoListItems= new ArrayList<to_do_list>();
 
@@ -539,6 +551,8 @@ public abstract class database extends RoomDatabase {
 
         return ToDoListItems;
     }
+
+    //this method checks if the checklist table is empty
     private static boolean isCheckListEmpty(database INSTANCE){
         if(INSTANCE.checklistDAO().getAll().size()==0){
             return true;
@@ -547,6 +561,7 @@ public abstract class database extends RoomDatabase {
         }
     }
 
+    //this method checks if the events table is empty
     private static boolean isEventEmpty(database INSTANCE){
         if(INSTANCE.eventDAO().getAll().size()==0){
             return true;
@@ -555,6 +570,7 @@ public abstract class database extends RoomDatabase {
         }
     }
 
+    //this method checks if the place table is empty
     private static boolean isPlaceEmpty(database INSTANCE){
         if(INSTANCE.placeDAO().getAll().size()==0){
             return true;
@@ -563,6 +579,7 @@ public abstract class database extends RoomDatabase {
         }
     }
 
+    //this method checks if the place image table is empty
     private static boolean isPlaceImageEmpty(database INSTANCE){
         if(INSTANCE.place_imageDAO().getAll().size()==0){
             return true;
@@ -570,6 +587,7 @@ public abstract class database extends RoomDatabase {
             return false;
         }
     }
+    //this method checks if the to do list table is empty
     private static boolean isToDoListEmpty(database INSTANCE){
         if(INSTANCE.to_do_listDAO().getAll().size()==0){
             return true;
@@ -578,6 +596,7 @@ public abstract class database extends RoomDatabase {
         }
     }
 
+    //this table destorys the instance
     public static void destroyInstance() {
 
         INSTANCE = null;

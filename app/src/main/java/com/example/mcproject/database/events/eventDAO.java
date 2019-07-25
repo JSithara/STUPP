@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 
 import java.util.List;
-
+//This is the events DAO with all the queries to be performed on the Database entity
 @Dao
 public interface eventDAO {
     @Query("SELECT * FROM event")

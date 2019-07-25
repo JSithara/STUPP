@@ -16,6 +16,8 @@ public class PlaceTypeActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     String place_type;
+
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

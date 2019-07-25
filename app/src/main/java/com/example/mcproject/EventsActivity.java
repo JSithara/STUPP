@@ -16,11 +16,12 @@ public class EventsActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events_activity);
-        getSupportActionBar().setTitle("Events");
+        getSupportActionBar().setTitle("EVENTS");
 
         List<event> events = database.getAppDatabase(getApplicationContext()).eventDAO().getAll();
         recyclerView = (RecyclerView) findViewById(R.id.events_recycler_recycler_view);

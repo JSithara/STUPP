@@ -2,7 +2,7 @@ package com.example.mcproject.database.places;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+//Class is the Places entity with the setters and Getters
 @Entity
 public class Places {
     @PrimaryKey(autoGenerate = true)

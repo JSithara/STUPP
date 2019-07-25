@@ -12,11 +12,12 @@ public class MobileRecommenderAppActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    //this method initializes all the variable and call the on create methods for this activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mobile_app_recommender_activity);
-        getSupportActionBar().setTitle("Mobile Applications Recommender");
+        getSupportActionBar().setTitle("MOBILE APP RECOMMENDER");
         TreeMap<String,String> MobileAppData = SetMobileData();
         recyclerView = (RecyclerView) findViewById(R.id.mobile_app_recommender_recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -28,6 +29,7 @@ public class MobileRecommenderAppActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
     }
 
+    //this method initializes the mobile app recommender data
     private TreeMap<String,String> SetMobileData(){
         TreeMap<String,String> data = new TreeMap<String,String>();
         data.put("DalU",  "https://play.google.com/store/apps/details?id=edu.dalhousie.mobileapp&hl=en");
